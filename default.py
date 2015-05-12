@@ -28,7 +28,8 @@ def CAUTA_LIST(url):
     if len(match) > 0:
         print match
         for legatura, name, length, s, img in match:
-            name = HTMLParser.HTMLParser().unescape(  codecs.decode(name, "unicode_escape") ) + " " + length
+            #name = HTMLParser.HTMLParser().unescape(  codecs.decode(name, "unicode_escape") ) + " " + length
+            name = name + " " + length
             the_link = legatura
             image = img
             sxaddLink(name,the_link,image,name,10)
